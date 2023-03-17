@@ -1,3 +1,4 @@
+import { BsFillCartPlusFill } from "react-icons/bs";
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import {
@@ -69,8 +70,8 @@ export const Menu = () => {
                 </LeftContainer>
                 <RightContainer>
                     <NavbarLinkExtend to='/'>
-                        Carrinho
-                    </NavbarLinkExtend>
+                    <BsFillCartPlusFill />
+                                       </NavbarLinkExtend>
                 </RightContainer>
             </NavInnerContainer>
 
