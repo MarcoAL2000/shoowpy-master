@@ -1,8 +1,38 @@
+import React, { useState, useEffect } from 'react'
+import axios from 'axios';
 import { Footer } from '../../components/Footer'
-import { Menu } from '../../components/Menu'
 import { Card } from "../../components/Card";
+import { Menu } from '../../components/Menu'
+
+
+interface interfData {
+    "id": string,
+    "id_categoria": number,
+    "nome": string,
+    "valor": string,
+    "promo": string,
+    "promoNumber": string,
+    "imagemg": string,
+    "imagemp": string
+
+}
 
 export const Home = () => {
+
+    const [extendNavbar, setExtendNavbar] = useState(false);
+    const [dataProduto, setProduto] = useState<Array<interfData>>([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:3001/produtos')
+            .then((response) => {
+                setProduto(response.data)
+            })
+            .catch((erro) => {
+                console.log(erro)
+            })
+
+    }, [])
+
     return (
         <>
             <Menu />
@@ -21,9 +51,17 @@ export const Home = () => {
                         flexWrap: 'wrap'
                     }}
                 >
-                    <Card
-                        dados='Carol'
-                    />
+                    {
+                        dataProduto.map((produto) => (
+                            <Card
+                                id={produto.id}
+                                nome={produto.nome}
+                                valor={produto.valor}
+                                promo={produto.promo}
+                                imagem={produto.imagemp}
+                            />
+                        ))
+                    }
 
                 </div>
             </div>

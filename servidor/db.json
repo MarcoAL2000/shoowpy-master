@@ -8,5 +8,38 @@
             "id": 2,
             "categoria": "Eletrodomesticos"
         }
+    ],
+    "Produtos": [
+        {
+            "id": "1",
+            "id_categoria": 1,
+            "nome": "Smartphone Samsung Galaxy S20 FE 5G 128GB Azul - Marinho 6GB RAM 6,5” Câm. Tripla   Selfie 32MP",
+            "valor": "3999.00",
+            "promo": "1799.10",
+            "promoNumber": "1799.10",
+            "imagemg": "ssgs20g.jpg",
+            "imagemp": "ssgs20p.jpg"
+        },
+        {
+            "id": "2",
+            "id_categoria": 1,
+            "nome": "iPhone 11 Apple 64GB Branco 6,1” 12MP iOS",
+            "valor": "4769.90",
+            "promo": "3299.00",
+            "promoNumber": "3299.00",
+            "imagemg": "ip11g.jpg",
+            "imagemp": "ip11p.jpg"
+        },
+        {
+            "id": "3",
+            "id_categoria": 1,
+            "nome": "Smartphone Motorola Moto G32 128GB Preto 4G - Octa-Core 4GB RAM 6,5” Câm. Tripla   Selfie 16MP",
+            "valor": "1599.90",
+            "promo": "1195.00",
+            "promoNumber": "1195.00",
+            "imagemg": "smotog32g.jpg",
+            "imagemp": "smotog32p.jpg"
+
+         }
     ]
 }
