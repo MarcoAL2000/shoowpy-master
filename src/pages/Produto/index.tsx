@@ -17,12 +17,20 @@ interface interfData {
 }
 
 export const Produto = () => {
+
     const { id } = useParams()
     const navigate = useNavigate()
 
     const caminho = 'https://raw.githubusercontent.com/profchines/imagensProjetoU2/main/'
 
     const [dataProduto, setProduto] = useState<interfData>();
+
+    const numero = 50.0
+
+    console.log(new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format
+
+
+    )
 
     useEffect(() => {
         axios.get('http://localhost:3001/produtos?id=' + id)

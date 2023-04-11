@@ -58,7 +58,7 @@ export const Menu = () => {
                         dataMenu.map((menu) => (
                             <NavbarLink
                                 key={menu.id}
-                                to='/'
+                                to={"/categoria/" + menu.id}
                             >
                                 {
                                     menu.categoria
@@ -69,7 +69,7 @@ export const Menu = () => {
                     }
                 </LeftContainer>
                 <RightContainer>
-                    <NavbarLinkExtend to='/'>
+                    <NavbarLinkExtend to='/Carrinho'>
                     <BsFillCartPlusFill />
                                        </NavbarLinkExtend>
                 </RightContainer>
@@ -82,7 +82,8 @@ export const Menu = () => {
                             dataMenu.map((menu) => (
                                 <NavbarLinkExtend
                                     key={menu.id}
-                                    to='/'
+                                    reloadDocument={true}
+                                    to={"/categoria/" + menu.id}
                                 >
                                     {
                                         menu.categoria
